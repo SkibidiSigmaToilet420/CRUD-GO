@@ -1,0 +1,92 @@
+{{ define "editar"}}
+{{ template "cabecera"}}
+<div class="card">
+    <div class="card-header">Modificar un producto</div>
+    <div class="card-body">
+        <form method="post" action="/actualizar">
+
+           
+            <input
+                type="hidden"
+                value={{.Id}}
+                class="form-control"
+                name="id"
+                id="id"
+                placeholder=""
+            />
+            
+
+
+            
+            <div class="mb-3">
+                <label for="" class="form-label">Nombre</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    name="nombre"
+                    value={{.Nombre}}
+                    id="nombre"
+                    aria-describedby="helpId"
+                    placeholder=""
+                />
+                <small id="helpId" class="form-text text-muted">Ingrese el nombre del producto</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Precio</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    name="precio"
+                    value={{.Precio}}
+                    id="precio"
+                    aria-describedby="helpId"
+                    placeholder=""
+                />
+                <small id="helpId" class="form-text text-muted">Ingrese el precio del producto</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Estado</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    name="estado"
+                    value={{.Estado}}
+                    id="estado"
+                    aria-describedby="helpId"
+                    placeholder=""
+                />
+                <small id="helpId" class="form-text text-muted">Ingrese el estado del producto</small>
+            </div>
+
+            <!-- <div>
+                <label for="" class="form-label">Estado</label>
+                <select name="estado" id="estado" class="form-select" aria-label="Default select example">
+                
+                <option value="AC">AC</option>
+                <option value="IN">IN</option>
+              </select>
+              <small id="helpId" class="form-text text-muted">Ingrese el estado del producto</small>
+            </div>    -->    
+            <!-- <option selected>Estado</option> -->
+    
+              <br>
+            <button
+                type="submit"
+                class="btn btn-primary"
+            >
+                Modificar Producto
+            </button>
+   
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+{{ template "pie"}}
+{{end}}

@@ -1,0 +1,65 @@
+{{ define "crear"}}
+{{ template "cabecera"}}
+<div class="card">
+    <div class="card-header">Agregar un producto nuevo</div>
+    <div class="card-body">
+        <form method="post" action="/insertar">
+
+            <div class="mb-3">
+                <label for="" class="form-label">Nombre</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    name="nombre"
+                    id="nombre"
+                    aria-describedby="helpId"
+                    placeholder=""
+                />
+                <small id="helpId" class="form-text text-muted">Ingrese el nombre del producto</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Precio</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    name="precio"
+                    id="precio"
+                    aria-describedby="helpId"
+                    placeholder=""
+                />
+                <small id="helpId" class="form-text text-muted">Ingrese el precio del producto</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Estado</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    name="estado"
+                    id="estado"
+                    aria-describedby="helpId"
+                    placeholder=""
+                />
+                <small id="helpId" class="form-text text-muted">Ingrese el estado del producto</small>
+            </div>  
+    
+              <br>
+            <button
+                type="submit"
+                class="btn btn-primary"
+            >
+                Agregar Producto
+            </button>
+   
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+{{ template "pie"}}
+{{end}}
